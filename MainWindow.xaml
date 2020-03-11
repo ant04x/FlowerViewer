@@ -7,37 +7,37 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="550" Width="800" MinHeight="550" MinWidth="800">
     <Grid>
-        <Button x:Name="navBtnBack" Content="&lt;" x:FieldModifier="public"
+        <Button x:Name="navBtnBack" Content="ᐊ" x:FieldModifier="public"
             Margin="10,10,0,0"
-            Cursor="Hand" Height="40" VerticalAlignment="Top" HorizontalAlignment="Left" Width="40" FontSize="24" FontFamily="Segoe UI Semibold" FontWeight="Bold"/>
-        <Label Margin="10,52,0,0" Content="Nombre:" FontSize="24" HorizontalAlignment="Left" Width="112" Height="45" VerticalAlignment="Top"/>
-        <TextBox Name="tbSettingText" Margin="122,64,0,0" VerticalAlignment="Top" HorizontalAlignment="Left" Height="26" FontSize="14">
+            Cursor="Hand" Height="40" VerticalAlignment="Top" HorizontalAlignment="Left" Width="40" FontSize="24"/>
+        <Button x:Name="navBtnNext" Content="ᐅ" x:FieldModifier="public"
+            Margin="55,10,0,0"
+            Cursor="Hand" Height="40" VerticalAlignment="Top" HorizontalAlignment="Left" Width="40" FontSize="24"/>
+        <Label x:Name="nameLbl" Margin="10,52,0,0" Content="Nombre:" FontSize="24" HorizontalAlignment="Left" Width="112" Height="45" VerticalAlignment="Top"/>
+        <TextBox x:Name="tbName" Margin="122,64,0,0" VerticalAlignment="Top" HorizontalAlignment="Left" Height="26" FontSize="14">
             Introduce el nombre de la flor...
         </TextBox>
-        <Label Margin="10,87,0,0" Content="Color:" FontSize="24" Height="45" VerticalAlignment="Top" HorizontalAlignment="Left" Width="112"/>
-        <ComboBox Margin="93,99,0,0" HorizontalAlignment="Left" Width="142" Height="25" VerticalAlignment="Top" FontSize="14">
+        <Label x:Name="colorLbl" Margin="10,87,0,0" Content="Color:" FontSize="24" Height="45" VerticalAlignment="Top" HorizontalAlignment="Left" Width="112"/>
+        <ComboBox x:Name="cmbxColor" Margin="93,99,0,0" HorizontalAlignment="Left" Width="142" Height="25" VerticalAlignment="Top" FontSize="14">
             <ComboBoxItem IsSelected="True">Blanco</ComboBoxItem>
             <ComboBoxItem>Rojo</ComboBoxItem>
             <ComboBoxItem>Amarillo</ComboBoxItem>
             <ComboBoxItem>Morado</ComboBoxItem>
             <ComboBoxItem>Azul</ComboBoxItem>
         </ComboBox>
-        <Button x:Name="navBtnBack_Copy" Content="&gt;" x:FieldModifier="public"
-            Margin="55,10,0,0"
-            Cursor="Hand" Height="40" VerticalAlignment="Top" HorizontalAlignment="Left" Width="40" FontSize="24" FontFamily="Segoe UI Semibold" FontWeight="Bold"/>
-        <Label Margin="10,120,0,0" Content="Descripción:" FontSize="24" HorizontalAlignment="Left" Width="147" Height="45" VerticalAlignment="Top"/>
-        <TextBox ScrollViewer.HorizontalScrollBarVisibility="Disabled"
+        <Label x:Name="descriptionLbl" Margin="10,120,0,0" Content="Descripción:" FontSize="24" HorizontalAlignment="Left" Width="147" Height="45" VerticalAlignment="Top"/>
+        <TextBox x:Name="tbDescription" ScrollViewer.HorizontalScrollBarVisibility="Disabled"
                 ScrollViewer.VerticalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Visible" AcceptsReturn="True" AcceptsTab="True" MaxWidth="379" MaxHeight="177"  Width="316" Height="180" Margin="162,134,0,0" VerticalAlignment="Top" HorizontalAlignment="Left" FontSize="14"/>
-        <Label Margin="10,300,0,0" Content="Imágen:" FontSize="24" HorizontalAlignment="Left" Width="147" Height="45" VerticalAlignment="Top"/>
-        <Image Width = "200" Source = "C:\Users\Antonio\Desktop\fuchsia.jpg"  
-            VerticalAlignment = "Top" Margin = "114,319,0,0" HorizontalAlignment="Left"/>
-        <Button x:Name="navBtnBack_Copy1" Content="Mostrar" x:FieldModifier="public"
+        <Button x:Name="btnViewDesc" Content="Mostrar" x:FieldModifier="public"
             Margin="488,134,0,0"
             Cursor="Hand" Height="31" VerticalAlignment="Top" HorizontalAlignment="Left" Width="92" FontSize="14"/>
-        <Button x:Name="navBtnBack_Copy2" Content="Cargar" x:FieldModifier="public"
+        <Label x:Name="lblImage" Margin="10,306,0,0" Content="Imágen:" FontSize="24" HorizontalAlignment="Left" Width="147" Height="45" VerticalAlignment="Top"/>
+        <Image x:Name="imgFlower" Width = "200" Source = "C:\Users\Antonio\Desktop\fuchsia.jpg"  
+            VerticalAlignment = "Top" Margin = "114,319,0,0" HorizontalAlignment="Left"/>
+        <Button x:Name="btnCharge" Content="Cargar" x:FieldModifier="public"
             Margin="325,319,0,0"
             Cursor="Hand" Height="31" VerticalAlignment="Top" HorizontalAlignment="Left" Width="92" FontSize="14"/>
-        <Button x:Name="navBtnBack_Copy3" Content="Borrar" x:FieldModifier="public"
+        <Button x:Name="btnDelete" Content="Borrar" x:FieldModifier="public"
             Margin="325,355,0,0"
             Cursor="Hand" Height="31" VerticalAlignment="Top" HorizontalAlignment="Left" Width="92" FontSize="14"/>
     </Grid>
