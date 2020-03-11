@@ -40,5 +40,14 @@
         <Button x:Name="btnDelete" Content="Borrar" x:FieldModifier="public"
             Margin="325,355,0,0"
             Cursor="Hand" Height="31" VerticalAlignment="Top" HorizontalAlignment="Left" Width="92" FontSize="14"/>
+        <Button x:Name="btnCharge_Copy" Content="Guardar" x:FieldModifier="public"
+            Margin="673,469,0,0"
+            Cursor="Hand" Height="31" VerticalAlignment="Top" HorizontalAlignment="Left" Width="92" FontSize="14"/>
+        <Button x:Name="btnCharge_Copy1" Content="Borrar" x:FieldModifier="public"
+            Margin="572,469,0,0"
+            Cursor="Hand" Height="31" VerticalAlignment="Top" HorizontalAlignment="Left" Width="92" FontSize="14"/>
+        <Button x:Name="btnCharge_Copy2" Content="Nuevo" x:FieldModifier="public"
+            Margin="471,469,0,0"
+            Cursor="Hand" Height="31" VerticalAlignment="Top" HorizontalAlignment="Left" Width="92" FontSize="14"/>
     </Grid>
 </Window>
