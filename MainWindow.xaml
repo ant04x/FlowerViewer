@@ -5,8 +5,8 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:FlowerViewer"
         mc:Ignorable="d"
-        Title="MainWindow" Height="550" Width="800">
-    <Grid MinWidth="792" MinHeight="420" Height="510">
+        Title="MainWindow" Height="550" Width="800" MinHeight="550" MinWidth="800">
+    <Grid>
         <Button x:Name="navBtnBack" Content="&lt;" x:FieldModifier="public"
             Margin="10,10,0,0"
             Cursor="Hand" Height="40" VerticalAlignment="Top" HorizontalAlignment="Left" Width="40" FontSize="24" FontFamily="Segoe UI Semibold" FontWeight="Bold"/>
@@ -31,5 +31,14 @@
         <Label Margin="10,300,0,0" Content="Imágen:" FontSize="24" HorizontalAlignment="Left" Width="147" Height="45" VerticalAlignment="Top"/>
         <Image Width = "200" Source = "C:\Users\Antonio\Desktop\fuchsia.jpg"  
             VerticalAlignment = "Top" Margin = "114,319,0,0" HorizontalAlignment="Left"/>
+        <Button x:Name="navBtnBack_Copy1" Content="Mostrar" x:FieldModifier="public"
+            Margin="488,134,0,0"
+            Cursor="Hand" Height="31" VerticalAlignment="Top" HorizontalAlignment="Left" Width="92" FontSize="14"/>
+        <Button x:Name="navBtnBack_Copy2" Content="Cargar" x:FieldModifier="public"
+            Margin="325,319,0,0"
+            Cursor="Hand" Height="31" VerticalAlignment="Top" HorizontalAlignment="Left" Width="92" FontSize="14"/>
+        <Button x:Name="navBtnBack_Copy3" Content="Borrar" x:FieldModifier="public"
+            Margin="325,355,0,0"
+            Cursor="Hand" Height="31" VerticalAlignment="Top" HorizontalAlignment="Left" Width="92" FontSize="14"/>
     </Grid>
 </Window>
