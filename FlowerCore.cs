@@ -61,7 +61,7 @@ namespace FlowerViewer
             // MOSTRAR
             mw.btnViewDesc.Click += (o, i) =>
             {
-
+                throw new NotImplementedException();
             };
 
             /*----------------IMÁGEN----------------*/
