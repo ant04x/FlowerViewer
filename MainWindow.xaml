@@ -7,6 +7,24 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
-        
+        <Button x:Name="navBtnBack" Content="&lt;" x:FieldModifier="public"
+            Margin="10,10,0,0"
+            Cursor="Hand" Height="40" VerticalAlignment="Top" HorizontalAlignment="Left" Width="40" FontSize="24" FontFamily="Segoe UI Semibold" FontWeight="Bold"/>
+        <Label Margin="10,52,670,322" Content="Nombre:" FontSize="24"/>
+        <TextBox Name="tbSettingText" Margin="122,61,0,0" VerticalAlignment="Top" HorizontalAlignment="Left" Height="26">
+            Introduce el nombre de la flor...
+        </TextBox>
+        <Label Margin="10,87,670,287" Content="Color:" FontSize="24"/>
+        <ComboBox Margin="93,99,557,290">
+            <ComboBoxItem IsSelected="True">Blanco</ComboBoxItem>
+            <ComboBoxItem>Rojo</ComboBoxItem>
+            <ComboBoxItem>Amarillo</ComboBoxItem>
+            <ComboBoxItem>Morado</ComboBoxItem>
+            <ComboBoxItem>Azul</ComboBoxItem>
+        </ComboBox>
+        <Button x:Name="navBtnBack_Copy" Content="&gt;" x:FieldModifier="public"
+            Margin="55,10,0,0"
+            Cursor="Hand" Height="40" VerticalAlignment="Top" HorizontalAlignment="Left" Width="40" FontSize="24" FontFamily="Segoe UI Semibold" FontWeight="Bold"/>
+        <Label Margin="10,120,635,254" Content="Descripción:" FontSize="24"/>
     </Grid>
 </Window>
