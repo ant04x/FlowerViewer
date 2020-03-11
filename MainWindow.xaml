@@ -26,5 +26,7 @@
             Margin="55,10,0,0"
             Cursor="Hand" Height="40" VerticalAlignment="Top" HorizontalAlignment="Left" Width="40" FontSize="24" FontFamily="Segoe UI Semibold" FontWeight="Bold"/>
         <Label Margin="10,120,635,254" Content="Descripción:" FontSize="24"/>
+        <TextBox ScrollViewer.HorizontalScrollBarVisibility="Disabled"
+                ScrollViewer.VerticalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Visible" AcceptsReturn="True" AcceptsTab="True" MaxWidth="379" MaxHeight="177"  Width="316" Height="180" Margin="162,134,0,0" VerticalAlignment="Top" HorizontalAlignment="Left" FontSize="14"/>
     </Grid>
 </Window>
