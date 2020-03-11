@@ -19,7 +19,7 @@
         </TextBox>
         <Label x:Name="colorLbl" Margin="10,87,0,0" Content="Color:" FontSize="24" Height="45" VerticalAlignment="Top" HorizontalAlignment="Left" Width="112"/>
         <ComboBox x:Name="cmbxColor" Margin="93,99,0,0" HorizontalAlignment="Left" Width="142" Height="25" VerticalAlignment="Top" FontSize="14">
-            <ComboBoxItem IsSelected="True">Blanco</ComboBoxItem>
+            <ComboBoxItem>Blanco</ComboBoxItem>
             <ComboBoxItem>Rojo</ComboBoxItem>
             <ComboBoxItem>Amarillo</ComboBoxItem>
             <ComboBoxItem>Morado</ComboBoxItem>
@@ -40,13 +40,13 @@
         <Button x:Name="btnDelete" Content="Borrar" x:FieldModifier="public"
             Margin="325,355,0,0"
             Cursor="Hand" Height="31" VerticalAlignment="Top" HorizontalAlignment="Left" Width="92" FontSize="14"/>
-        <Button x:Name="btnCharge_Copy" Content="Guardar" x:FieldModifier="public"
+        <Button x:Name="btnSave" Content="Guardar" x:FieldModifier="public"
             Margin="673,469,0,0"
             Cursor="Hand" Height="31" VerticalAlignment="Top" HorizontalAlignment="Left" Width="92" FontSize="14"/>
-        <Button x:Name="btnCharge_Copy1" Content="Borrar" x:FieldModifier="public"
+        <Button x:Name="btnRemove" Content="Borrar" x:FieldModifier="public"
             Margin="572,469,0,0"
             Cursor="Hand" Height="31" VerticalAlignment="Top" HorizontalAlignment="Left" Width="92" FontSize="14"/>
-        <Button x:Name="btnCharge_Copy2" Content="Nuevo" x:FieldModifier="public"
+        <Button x:Name="btnNew" Content="Nuevo" x:FieldModifier="public"
             Margin="471,469,0,0"
             Cursor="Hand" Height="31" VerticalAlignment="Top" HorizontalAlignment="Left" Width="92" FontSize="14"/>
     </Grid>

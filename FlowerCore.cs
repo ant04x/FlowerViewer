@@ -24,7 +24,7 @@ namespace FlowerViewer
 
             };
 
-            /*----------------NAVEGATION----------------*/
+            /*----------------COLOR SELECTION----------------*/
 
             mw.cmbxColor.SelectionChanged += (o, i) =>
             {
@@ -47,6 +47,45 @@ namespace FlowerViewer
                 // Azul
                 if (mw.cmbxColor.SelectedIndex == 4)
                     selFlower.color = Flower.Colors.Azul;
+            };
+
+            /*----------------DESCRIPCIÓN----------------*/
+            // MOSTRAR
+            mw.btnViewDesc.Click += (o, i) =>
+            {
+
+            };
+
+            /*----------------IMÁGEN----------------*/
+            // CARGAR
+            mw.btnCharge.Click += (o, i) =>
+            {
+
+            };
+
+            // BORRAR
+            mw.btnDelete.Click += (o, i) =>
+            {
+
+            };
+
+            /*----------------MAIN ACTIONS------------*/
+            // BOTÓN NUEVO
+            mw.btnNew.Click += (o, i) =>
+            {
+
+            };
+
+            // BOTÓN GUARDAR
+            mw.btnSave.Click += (o, i) =>
+            {
+
+            };
+
+            // BOTÓN BORRAR
+            mw.btnRemove.Click += (o, i) =>
+            {
+
             };
         }
     }
