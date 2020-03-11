@@ -14,7 +14,7 @@
             Margin="55,10,0,0"
             Cursor="Hand" Height="40" VerticalAlignment="Top" HorizontalAlignment="Left" Width="40" FontSize="24"/>
         <Label x:Name="nameLbl" Margin="10,52,0,0" Content="Nombre:" FontSize="24" HorizontalAlignment="Left" Width="112" Height="45" VerticalAlignment="Top"/>
-        <TextBox x:Name="tbName" Margin="122,64,0,0" VerticalAlignment="Top" HorizontalAlignment="Left" Height="26" FontSize="14">
+        <TextBox x:Name="tbName" Margin="122,64,0,0" VerticalAlignment="Top" HorizontalAlignment="Left" Height="26" FontSize="14" Width="200">
             Introduce el nombre de la flor...
         </TextBox>
         <Label x:Name="colorLbl" Margin="10,87,0,0" Content="Color:" FontSize="24" Height="45" VerticalAlignment="Top" HorizontalAlignment="Left" Width="112"/>
