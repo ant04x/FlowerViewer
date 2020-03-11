@@ -10,12 +10,12 @@
         <Button x:Name="navBtnBack" Content="&lt;" x:FieldModifier="public"
             Margin="10,10,0,0"
             Cursor="Hand" Height="40" VerticalAlignment="Top" HorizontalAlignment="Left" Width="40" FontSize="24" FontFamily="Segoe UI Semibold" FontWeight="Bold"/>
-        <Label Margin="10,52,670,322" Content="Nombre:" FontSize="24"/>
-        <TextBox Name="tbSettingText" Margin="122,61,0,0" VerticalAlignment="Top" HorizontalAlignment="Left" Height="26">
+        <Label Margin="10,52,0,0" Content="Nombre:" FontSize="24" HorizontalAlignment="Left" Width="112" Height="45" VerticalAlignment="Top"/>
+        <TextBox Name="tbSettingText" Margin="122,64,0,0" VerticalAlignment="Top" HorizontalAlignment="Left" Height="26" FontSize="14">
             Introduce el nombre de la flor...
         </TextBox>
-        <Label Margin="10,87,670,287" Content="Color:" FontSize="24"/>
-        <ComboBox Margin="93,99,557,290">
+        <Label Margin="10,87,0,0" Content="Color:" FontSize="24" Height="45" VerticalAlignment="Top" HorizontalAlignment="Left" Width="112"/>
+        <ComboBox Margin="93,99,0,0" HorizontalAlignment="Left" Width="142" Height="25" VerticalAlignment="Top" FontSize="14">
             <ComboBoxItem IsSelected="True">Blanco</ComboBoxItem>
             <ComboBoxItem>Rojo</ComboBoxItem>
             <ComboBoxItem>Amarillo</ComboBoxItem>
@@ -25,7 +25,7 @@
         <Button x:Name="navBtnBack_Copy" Content="&gt;" x:FieldModifier="public"
             Margin="55,10,0,0"
             Cursor="Hand" Height="40" VerticalAlignment="Top" HorizontalAlignment="Left" Width="40" FontSize="24" FontFamily="Segoe UI Semibold" FontWeight="Bold"/>
-        <Label Margin="10,120,635,254" Content="Descripción:" FontSize="24"/>
+        <Label Margin="10,120,0,0" Content="Descripción:" FontSize="24" HorizontalAlignment="Left" Width="147" Height="45" VerticalAlignment="Top"/>
         <TextBox ScrollViewer.HorizontalScrollBarVisibility="Disabled"
                 ScrollViewer.VerticalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Visible" AcceptsReturn="True" AcceptsTab="True" MaxWidth="379" MaxHeight="177"  Width="316" Height="180" Margin="162,134,0,0" VerticalAlignment="Top" HorizontalAlignment="Left" FontSize="14"/>
     </Grid>
