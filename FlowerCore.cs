@@ -9,19 +9,27 @@ namespace FlowerViewer
 {
     class FlowerCore
     {
-        public static void Process(MainWindow mw)
+        public static void Process(MainWindow mw, List<Flower> flowers)
         {
-            Flower selFlower = null;
+            Flower selFlower = flowers[0];
 
             /*----------------NAVEGATION----------------*/
             mw.navBtnBack.Click += (o, i) =>
             {
-                
+                int index = flowers.IndexOf(selFlower);
+                if (index-- == -1)
+                    selFlower = flowers[flowers.Count];
+                else
+                    selFlower = flowers[index--];
             };
 
             mw.navBtnNext.Click += (o, i) =>
             {
-
+                int index = flowers.IndexOf(selFlower);
+                if (index++ == flowers.Count)
+                    selFlower = flowers[0];
+                else
+                    selFlower = flowers[index++];
             };
 
             /*----------------COLOR SELECTION----------------*/
@@ -87,6 +95,14 @@ namespace FlowerViewer
             {
 
             };
+        }
+
+        public static List<Flower> MaterializeDir(string directory)
+        {
+            // EXTRAER JSONS
+            // CONVERTIR JSONS A FLORES
+            // DEVOLVER LISTA DE FLORES
+            throw new NotImplementedException();
         }
     }
 }

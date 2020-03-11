@@ -20,7 +20,7 @@ namespace FlowerViewer
         public MainWindow()
         {
             InitializeComponent();
-            FlowerCore.Process(this);
+            FlowerCore.Process(this, FlowerCore.MaterializeDir("C:\\Usuarios\\Antonio\\"));
         }
     }
 }
