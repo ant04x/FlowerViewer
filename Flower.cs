@@ -8,9 +8,9 @@ namespace FlowerViewer
 {
     class Flower
     {
-        string name;
+        public string name;
 
-        enum Color
+        public enum Colors
         {
             Blanco,
             Rojo,
@@ -19,8 +19,10 @@ namespace FlowerViewer
             Azul
         }
 
-        string description;
+        public Colors color = new Colors();
 
-        byte[] image;
+        public string description;
+
+        public byte[] image;
     }
 }
