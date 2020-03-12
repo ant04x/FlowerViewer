@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 using System.Diagnostics;
 using static System.Net.Mime.MediaTypeNames;
 using System.Windows.Media.Imaging;
+using Newtonsoft.Json;
 
 namespace FlowerViewer
 {
@@ -115,7 +116,9 @@ namespace FlowerViewer
             // BOTÓN GUARDAR
             mw.btnSave.Click += (o, i) =>
             {
-                // Materializar flowers
+                // NET.Json flowers
+                string jsonPath = Path.GetDirectoryName(Path.GetDirectoryName(Directory.GetCurrentDirectory())) + "\\Resources\\flowers.json";
+                File.WriteAllText(jsonPath, JsonConvert.SerializeObject(flowers));
             };
 
             // BOTÓN BORRAR
@@ -131,7 +134,9 @@ namespace FlowerViewer
             };
         }
 
-        public static List<Flower> MaterializeDB(string directory)
+
+
+        public static List<Flower> fromJSON(string directory)
         {
             // EXTRAER JSON
             // CONVERTIR JSON A FLORES
