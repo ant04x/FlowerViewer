@@ -20,7 +20,12 @@ namespace FlowerViewer
         public MainWindow()
         {
             InitializeComponent();
-            FlowerCore.Process(this, FlowerCore.MaterializeDir("C:\\Usuarios\\Antonio\\"));
+            // FlowerCore.Process(this, FlowerCore.MaterializeDir("C:\\Usuarios\\Antonio\\"));
+            List<Flower> listaEjemplo = new List<Flower>();
+            listaEjemplo.Add(new Flower());
+            listaEjemplo.Add(new Flower());
+            listaEjemplo[1].color = Flower.Colors.Azul;
+            FlowerCore.Process(this, listaEjemplo);
         }
     }
 }

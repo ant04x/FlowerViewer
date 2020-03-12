@@ -17,19 +17,19 @@ namespace FlowerViewer
             mw.navBtnBack.Click += (o, i) =>
             {
                 int index = flowers.IndexOf(selFlower);
-                if (index-- == -1)
-                    selFlower = flowers[flowers.Count];
+                if (index == 0)
+                    selFlower = flowers[flowers.Count - 1];
                 else
-                    selFlower = flowers[index--];
+                    selFlower = flowers[index - 1];
             };
 
             mw.navBtnNext.Click += (o, i) =>
             {
                 int index = flowers.IndexOf(selFlower);
-                if (index++ == flowers.Count)
+                if (index + 1 == flowers.Count)
                     selFlower = flowers[0];
                 else
-                    selFlower = flowers[index++];
+                    selFlower = flowers[index + 1];
             };
 
             /*----------------COLOR SELECTION----------------*/
