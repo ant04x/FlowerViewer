@@ -95,7 +95,7 @@ namespace FlowerViewer
 
                     // Visualizar imágen
                     byte[] imageView = Convert.FromBase64String(selFlower.image);
-                    mw.imgFlower.Source =  LoadImage(imageView);
+                    mw.imgFlower.Source = LoadImage(imageView);
                 }
             };
 
@@ -117,7 +117,9 @@ namespace FlowerViewer
             // BOTÓN GUARDAR
             mw.btnSave.Click += (o, i) =>
             {
-                // Cargar ruta
+                // Refrescar todos los elementos menos la imágen.
+                RefreshProps(mw, selFlower);
+                // Guardar en la ruta
                 File.WriteAllText(flowersPath, JsonConvert.SerializeObject(flowers));
             };
 
@@ -134,14 +136,21 @@ namespace FlowerViewer
             };
         }
 
-
-
         public static List<Flower> fromJSON(string directory)
         {
             // EXTRAER JSON
             // CONVERTIR JSON A FLORES
             // DEVOLVER LISTA DE FLORES
             throw new NotImplementedException();
+        }
+
+        // Actualiza todos los campos de texto no cargables
+        private static void RefreshProps(MainWindow mw, Flower selFlower)
+        {
+            if (mw.tbName.Text != "Introduce el nombre de la flor...")
+                selFlower.name = mw.tbName.Text;
+            if (mw.tbDescription.Text.Length > 0)
+                selFlower.description = mw.tbDescription.Text;
         }
 
         // Convertor de byte a Bitmap
