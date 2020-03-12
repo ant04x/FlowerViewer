@@ -13,6 +13,7 @@ namespace FlowerViewer
 {
     class FlowerCore
     {
+        public static string flowersPath = Path.GetDirectoryName(Path.GetDirectoryName(Directory.GetCurrentDirectory())) + "\\Resources\\flowers.json";
         public static void Process(MainWindow mw, List<Flower> flowers)
         {
             Flower selFlower = flowers[0];
@@ -116,9 +117,8 @@ namespace FlowerViewer
             // BOTÓN GUARDAR
             mw.btnSave.Click += (o, i) =>
             {
-                // NET.Json flowers
-                string jsonPath = Path.GetDirectoryName(Path.GetDirectoryName(Directory.GetCurrentDirectory())) + "\\Resources\\flowers.json";
-                File.WriteAllText(jsonPath, JsonConvert.SerializeObject(flowers));
+                // Cargar ruta
+                File.WriteAllText(flowersPath, JsonConvert.SerializeObject(flowers));
             };
 
             // BOTÓN BORRAR
