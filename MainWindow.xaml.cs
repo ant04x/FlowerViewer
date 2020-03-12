@@ -20,12 +20,9 @@ namespace FlowerViewer
         public MainWindow()
         {
             InitializeComponent();
-            // FlowerCore.Process(this, FlowerCore.fromJSON("C:\\Usuarios\\Antonio\\flowers.json"));
-            List<Flower> listaEjemplo = new List<Flower>();
-            listaEjemplo.Add(new Flower());
-            listaEjemplo.Add(new Flower());
-            listaEjemplo[1].color = Flower.Colors.Azul;
-            FlowerCore.Process(this, listaEjemplo);
+            List<Flower> flowers = FlowerCore.fromJSON();
+            FlowerCore.Process(this, flowers);
+            FlowerCore.RefreshUI(this, flowers[0]);
         }
     }
 }

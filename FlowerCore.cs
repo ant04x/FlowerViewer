@@ -21,20 +21,24 @@ namespace FlowerViewer
             /*----------------NAVEGATION----------------*/
             mw.navBtnBack.Click += (o, i) =>
             {
+                RefreshProps(mw, selFlower);
                 int index = flowers.IndexOf(selFlower);
                 if (index == 0)
                     selFlower = flowers[flowers.Count - 1];
                 else
                     selFlower = flowers[index - 1];
+                RefreshUI(mw, selFlower);
             };
 
             mw.navBtnNext.Click += (o, i) =>
             {
+                RefreshProps(mw, selFlower);
                 int index = flowers.IndexOf(selFlower);
                 if (index + 1 == flowers.Count)
                     selFlower = flowers[0];
                 else
                     selFlower = flowers[index + 1];
+                RefreshUI(mw, selFlower);
             };
 
             /*----------------COLOR SELECTION----------------*/
@@ -112,6 +116,7 @@ namespace FlowerViewer
             {
                 flowers.Add(new Flower());
                 selFlower = flowers[flowers.Count - 1];
+                RefreshUI(mw, selFlower);
             };
 
             // BOTÓN GUARDAR
@@ -133,15 +138,17 @@ namespace FlowerViewer
                 else
                     selFlower = flowers[index - 1];
                 flowers.RemoveAt(index);
+                RefreshUI(mw, selFlower);
             };
         }
 
-        public static List<Flower> fromJSON(string directory)
+        public static List<Flower> fromJSON()
         {
             // EXTRAER JSON
             // CONVERTIR JSON A FLORES
             // DEVOLVER LISTA DE FLORES
-            throw new NotImplementedException();
+            string flowerJson = File.ReadAllText(flowersPath);
+            return JsonConvert.DeserializeObject<List<Flower>>(flowerJson);
         }
 
         // Actualiza todos los campos de texto no cargables
@@ -151,6 +158,20 @@ namespace FlowerViewer
                 selFlower.name = mw.tbName.Text;
             if (mw.tbDescription.Text.Length > 0)
                 selFlower.description = mw.tbDescription.Text;
+        }
+
+        public static void RefreshUI(MainWindow mw, Flower selFlower)
+        {
+            mw.tbName.Text = selFlower.name;
+            mw.cmbxColor.SelectedIndex = (int)selFlower.color;
+            mw.tbDescription.Text = selFlower.description;
+            if (selFlower.image != null)
+            {
+                byte[] imageView = Convert.FromBase64String(selFlower.image);
+                mw.imgFlower.Source = LoadImage(imageView);
+            }
+            else
+                mw.imgFlower.Source = null;
         }
 
         // Convertor de byte a Bitmap

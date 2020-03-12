@@ -12,11 +12,11 @@ namespace FlowerViewer
 
         public enum Colors
         {
-            Blanco,
-            Rojo,
-            Amarillo,
-            Morado,
-            Azul
+            Blanco = 0,
+            Rojo = 1,
+            Amarillo = 2,
+            Morado = 3,
+            Azul = 4
         }
 
         public Colors color = new Colors();
