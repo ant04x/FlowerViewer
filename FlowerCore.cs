@@ -5,6 +5,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Diagnostics;
+using static System.Net.Mime.MediaTypeNames;
+using System.Windows.Media.Imaging;
 
 namespace FlowerViewer
 {
@@ -88,13 +90,18 @@ namespace FlowerViewer
                     // Guardar objeto Flower
                     byte[] imageArray = File.ReadAllBytes(filename);
                     selFlower.image = Convert.ToBase64String(imageArray);
+
+                    // Visualizar imágen
+                    byte[] imageView = Convert.FromBase64String(selFlower.image);
+                    mw.imgFlower.Source =  LoadImage(imageView);
                 }
             };
 
             // BORRAR
             mw.btnDelete.Click += (o, i) =>
             {
-
+                selFlower.image = null;
+                mw.imgFlower.Source = null;
             };
 
             /*----------------MAIN ACTIONS------------*/
@@ -123,6 +130,26 @@ namespace FlowerViewer
             // CONVERTIR JSONS A FLORES
             // DEVOLVER LISTA DE FLORES
             throw new NotImplementedException();
+        }
+
+        // Convertor de byte a Bitmap
+        private static BitmapImage LoadImage(byte[] imageData)
+        {
+            if (imageData == null || imageData.Length == 0)
+                return null;
+            var image = new BitmapImage();
+            using (var mem = new MemoryStream(imageData))
+            {
+                mem.Position = 0;
+                image.BeginInit();
+                image.CreateOptions = BitmapCreateOptions.PreservePixelFormat;
+                image.CacheOption = BitmapCacheOption.OnLoad;
+                image.UriSource = null;
+                image.StreamSource = mem;
+                image.EndInit();
+            }
+            image.Freeze();
+            return image;
         }
     }
 }

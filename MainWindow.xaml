@@ -32,7 +32,7 @@
             Margin="488,134,0,0"
             Cursor="Hand" Height="31" VerticalAlignment="Top" HorizontalAlignment="Left" Width="92" FontSize="14"/>
         <Label x:Name="lblImage" Margin="10,306,0,0" Content="Imágen:" FontSize="24" HorizontalAlignment="Left" Width="147" Height="45" VerticalAlignment="Top"/>
-        <Image x:Name="imgFlower" Width = "200" Source = "C:\Users\Antonio\Desktop\fuchsia.jpg"  
+        <Image x:Name="imgFlower" Width = "200"  
             VerticalAlignment = "Top" Margin = "114,319,0,0" HorizontalAlignment="Left"/>
         <Button x:Name="btnCharge" Content="Cargar" x:FieldModifier="public"
             Margin="325,319,0,0"
