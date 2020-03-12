@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -68,7 +69,26 @@ namespace FlowerViewer
             // CARGAR
             mw.btnCharge.Click += (o, i) =>
             {
+                // Crea un diálogo para abrir un archivo.
+                Microsoft.Win32.OpenFileDialog dlg = new Microsoft.Win32.OpenFileDialog();
 
+                // Determinamos el filtro para el tipo de archivos
+                dlg.DefaultExt = ".png";
+                dlg.Filter = "JPEG Files (*.jpeg)|*.jpeg|PNG Files (*.png)|*.png|JPG Files (*.jpg)|*.jpg|GIF Files (*.gif)|*.gif";
+
+                // Comprobamos si el resultado es positivo
+                bool? result = dlg.ShowDialog();
+
+                // Si el resultado es positivo convertimos la imágen
+                if (result == true)
+                {
+                    // Ruta del documento
+                    string filename = dlg.FileName;
+
+                    // Guardar objeto Flower
+                    byte[] imageArray = File.ReadAllBytes(filename);
+                    selFlower.image = Convert.ToBase64String(imageArray);
+                }
             };
 
             // BORRAR

@@ -23,6 +23,6 @@ namespace FlowerViewer
 
         public string description;
 
-        public byte[] image;
+        public string image;
     }
 }
