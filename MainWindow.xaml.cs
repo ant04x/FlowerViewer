@@ -20,7 +20,7 @@ namespace FlowerViewer
         public MainWindow()
         {
             InitializeComponent();
-            // FlowerCore.Process(this, FlowerCore.MaterializeDir("C:\\Usuarios\\Antonio\\"));
+            // FlowerCore.Process(this, FlowerCore.Materialize("C:\\Usuarios\\Antonio\\flowers.json"));
             List<Flower> listaEjemplo = new List<Flower>();
             listaEjemplo.Add(new Flower());
             listaEjemplo.Add(new Flower());

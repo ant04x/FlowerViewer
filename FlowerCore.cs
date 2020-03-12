@@ -108,26 +108,33 @@ namespace FlowerViewer
             // BOTÓN NUEVO
             mw.btnNew.Click += (o, i) =>
             {
-
+                flowers.Add(new Flower());
+                selFlower = flowers[flowers.Count - 1];
             };
 
             // BOTÓN GUARDAR
             mw.btnSave.Click += (o, i) =>
             {
-
+                // Materializar flowers
             };
 
             // BOTÓN BORRAR
             mw.btnRemove.Click += (o, i) =>
             {
-
+                // Cambiar la posición a una menos
+                int index = flowers.IndexOf(selFlower);
+                if (index == 0)
+                    selFlower = flowers[1];
+                else
+                    selFlower = flowers[index - 1];
+                flowers.RemoveAt(index);
             };
         }
 
-        public static List<Flower> MaterializeDir(string directory)
+        public static List<Flower> MaterializeDB(string directory)
         {
-            // EXTRAER JSONS
-            // CONVERTIR JSONS A FLORES
+            // EXTRAER JSON
+            // CONVERTIR JSON A FLORES
             // DEVOLVER LISTA DE FLORES
             throw new NotImplementedException();
         }
