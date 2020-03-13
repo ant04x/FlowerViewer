@@ -22,7 +22,7 @@ namespace FlowerViewer
             mw = mainWindow;
             if (File.Exists(flowersPath))
             {
-                flowers = FromJson();
+                flowers = Utils.FromJson(flowersPath);
             }
             else
             {
@@ -82,8 +82,8 @@ namespace FlowerViewer
 
             if (result == true)
             {
-                SaveObject(ofd);
-                ViewJsonImg();
+                selFlower.image = Utils.SaveObject(ofd);
+                mw.imgFlower.Source = Utils.ViewJsonImg(selFlower.image);
             }
         }
 
@@ -106,13 +106,15 @@ namespace FlowerViewer
 
         public void DropFlower()
         {
-            // BackFlower();
+            Flower auxFlower = flowers[flowers.IndexOf(selFlower)];
+            BackFlower();
+            // Crear una nueva flor si no hay nada
             if(flowers.Count == 1)
                 flowers.Add(new Flower());
-            int index = flowers.IndexOf(selFlower);
+            int index = flowers.IndexOf(auxFlower);
             flowers.RemoveAt(index);
-            if (flowers.Count == 0)
-                selFlower = flowers[0];
+            // if (flowers.Count == 0)
+                // selFlower = flowers[0];
         }
 
         public void RefreshUnclickables()
@@ -131,55 +133,10 @@ namespace FlowerViewer
             if (selFlower.image != null)
             {
                 byte[] imageView = Convert.FromBase64String(selFlower.image);
-                mw.imgFlower.Source = LoadImage(imageView);
+                mw.imgFlower.Source = Utils.LoadImage(imageView);
             }
             else
                 mw.imgFlower.Source = null;
-        }
-
-        /*----------------AYUDAS--------------------*/
-
-        // Método estático conversor de byte a Bitmap
-        private static BitmapImage LoadImage(byte[] imageData)
-        {
-            if (imageData == null || imageData.Length == 0)
-                return null;
-            var image = new BitmapImage();
-            using (var mem = new MemoryStream(imageData))
-            {
-                mem.Position = 0;
-                image.BeginInit();
-                image.CreateOptions = BitmapCreateOptions.PreservePixelFormat;
-                image.CacheOption = BitmapCacheOption.OnLoad;
-                image.UriSource = null;
-                image.StreamSource = mem;
-                image.EndInit();
-            }
-            image.Freeze();
-            return image;
-        }
-
-        private void SaveObject(OpenFileDialog ofd)
-        {
-            // Ruta del documento
-            string filename = ofd.FileName;
-
-            // Guardar objeto Flower
-            byte[] imageArray = File.ReadAllBytes(filename);
-            selFlower.image = Convert.ToBase64String(imageArray);
-        }
-
-        private void ViewJsonImg()
-        {
-            // Visualizar imágen
-            byte[] imageView = Convert.FromBase64String(selFlower.image);
-            mw.imgFlower.Source = LoadImage(imageView);
-        }
-
-        private List<Flower> FromJson()
-        {
-            string flowerJson = File.ReadAllText(flowersPath);
-            return JsonConvert.DeserializeObject<List<Flower>>(flowerJson);
         }
     }
 }

@@ -21,7 +21,7 @@ namespace FlowerViewer
             mw.navBtnBack.Click += (o, i) =>
             {
                 m.RefreshUnclickables();
-                m.NextFlower();
+                m.BackFlower();
                 m.RefreshUI();
             };
 
@@ -81,8 +81,8 @@ namespace FlowerViewer
             // BOTÓN BORRAR
             mw.btnRemove.Click += (o, i) =>
             {
+                // m.BackFlower();
                 m.DropFlower();
-                m.BackFlower();
                 m.RefreshUI();
             };
         }
