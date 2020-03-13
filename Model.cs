@@ -137,6 +137,8 @@ namespace FlowerViewer
                 mw.imgFlower.Source = null;
         }
 
+        /*----------------AYUDAS--------------------*/
+
         // Método estático conversor de byte a Bitmap
         private static BitmapImage LoadImage(byte[] imageData)
         {
