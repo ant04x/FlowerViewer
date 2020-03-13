@@ -38,6 +38,8 @@ namespace FlowerViewer
             int index = flowers.IndexOf(selFlower);
             if (index == 0)
                 selFlower = flowers[flowers.Count - 1];
+            else if (index == -1)
+                selFlower = flowers[0];
             else
                 selFlower = flowers[index - 1];
         }
@@ -104,9 +106,13 @@ namespace FlowerViewer
 
         public void DropFlower()
         {
-            BackFlower();
+            // BackFlower();
+            if(flowers.Count == 1)
+                flowers.Add(new Flower());
             int index = flowers.IndexOf(selFlower);
             flowers.RemoveAt(index);
+            if (flowers.Count == 0)
+                selFlower = flowers[0];
         }
 
         public void RefreshUnclickables()
