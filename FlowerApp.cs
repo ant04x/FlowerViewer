@@ -40,6 +40,7 @@ namespace FlowerViewer
             };
 
             /*----------------DESCRIPCIÓN----------------*/
+
             // MOSTRAR
             mw.btnViewDesc.Click += (o, i) =>
             {
@@ -47,6 +48,7 @@ namespace FlowerViewer
             };
 
             /*----------------IMÁGEN----------------*/
+
             // CARGAR
             mw.btnCharge.Click += (o, i) =>
             { 
@@ -60,6 +62,7 @@ namespace FlowerViewer
             };
 
             /*----------------MAIN ACTIONS------------*/
+
             // BOTÓN NUEVO
             mw.btnNew.Click += (o, i) =>
             {
