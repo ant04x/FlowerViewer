@@ -32,7 +32,7 @@
             Margin="488,134,0,0"
             Cursor="Hand" Height="31" VerticalAlignment="Top" HorizontalAlignment="Left" Width="92" FontSize="14"/>
         <Label x:Name="lblImage" Margin="10,306,0,0" Content="Imágen:" FontSize="24" HorizontalAlignment="Left" Width="147" Height="45" VerticalAlignment="Top"/>
-        <Image x:Name="imgFlower" Width = "200"  
+        <Image x:Name="imgFlower" MaxWidth = "200" MaxHeight="170"
             VerticalAlignment = "Top" Margin = "114,319,0,0" HorizontalAlignment="Left"/>
         <Button x:Name="btnCharge" Content="Cargar" x:FieldModifier="public"
             Margin="325,319,0,0"
@@ -40,14 +40,20 @@
         <Button x:Name="btnDelete" Content="Borrar" x:FieldModifier="public"
             Margin="325,355,0,0"
             Cursor="Hand" Height="31" VerticalAlignment="Top" HorizontalAlignment="Left" Width="92" FontSize="14"/>
-        <Button x:Name="btnSave" Content="Guardar" x:FieldModifier="public"
-            Margin="673,469,0,0"
-            Cursor="Hand" Height="31" VerticalAlignment="Top" HorizontalAlignment="Left" Width="92" FontSize="14"/>
-        <Button x:Name="btnRemove" Content="Borrar" x:FieldModifier="public"
-            Margin="572,469,0,0"
-            Cursor="Hand" Height="31" VerticalAlignment="Top" HorizontalAlignment="Left" Width="92" FontSize="14"/>
+        <!--<Button x:Name="btnSave" Content="Guardar" x:FieldModifier="public"
+            Margin="0,469,27,19"
+            Cursor="Hand" FontSize="14" Height="31" VerticalAlignment="Bottom" HorizontalAlignment="Right" Width="92"/>-->
+        <!--<Button x:Name="btnRemove" Content="Borrar" x:FieldModifier="public"
+            Margin="0,469,128,19"
+            Cursor="Hand" FontSize="14" Height="31" VerticalAlignment="Bottom" HorizontalAlignment="Right" Width="92"/>-->
         <Button x:Name="btnNew" Content="Nuevo" x:FieldModifier="public"
-            Margin="471,469,0,0"
-            Cursor="Hand" Height="31" VerticalAlignment="Top" HorizontalAlignment="Left" Width="92" FontSize="14"/>
+            Margin="0,0,229,19"
+            Cursor="Hand" FontSize="14" Height="31" VerticalAlignment="Bottom" HorizontalAlignment="Right" Width="92"/>
+        <Button x:Name="btnRemove" Content="Borrar" x:FieldModifier="public"
+            Margin="0,0,128,19"
+            Cursor="Hand" FontSize="14" Height="31" VerticalAlignment="Bottom" HorizontalAlignment="Right" Width="92"/>
+        <Button x:Name="btnSave" Content="Guardar" x:FieldModifier="public"
+            Margin="0,0,27,19"
+            Cursor="Hand" FontSize="14" Height="31" VerticalAlignment="Bottom" HorizontalAlignment="Right" Width="92"/>
     </Grid>
 </Window>
