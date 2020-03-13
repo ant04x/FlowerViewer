@@ -106,15 +106,18 @@ namespace FlowerViewer
 
         public void DropFlower()
         {
-            Flower auxFlower = flowers[flowers.IndexOf(selFlower)];
+            int indexOriginal = flowers.IndexOf(selFlower);
+            Flower auxFlower = flowers[indexOriginal];
             BackFlower();
             // Crear una nueva flor si no hay nada
             if(flowers.Count == 1)
                 flowers.Add(new Flower());
             int index = flowers.IndexOf(auxFlower);
             flowers.RemoveAt(index);
-            // if (flowers.Count == 0)
-                // selFlower = flowers[0];
+
+            // Si se elimina el primero no dar la vuelta.
+            if (indexOriginal == 0)
+                selFlower = flowers[0];
         }
 
         public void RefreshUnclickables()
