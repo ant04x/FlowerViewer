@@ -67,7 +67,7 @@
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="Flower.cs" />
-    <Compile Include="FlowerCore.cs" />
+    <Compile Include="FlowerApp.cs" />
     <Compile Include="IModel.cs" />
     <Compile Include="MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
