@@ -20,9 +20,9 @@ namespace FlowerViewer
         public MainWindow()
         {
             InitializeComponent();
-            List<Flower> flowers = FlowerCore.fromJSON();
-            FlowerCore.Process(this, flowers);
-            FlowerCore.RefreshUI(this, flowers[0]);
+            Model m = new Model(this);
+            FlowerApp.Launch(this, m);
+            // FlowerCore.RefreshUI(this, flowers[0]);
         }
     }
 }
